@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tablero Dragon Ball</title>
+  <style>
+    body {
+      background: #cce6ff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #2c2c54;
+    }
+    .tablero {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: 50px;
+      justify-content: center;
+    }
+    .card {
+      position: relative;
+      width: 180px;
+      height: 190px;
+      background: #fff5e6;
+      border-radius: 12px;
+      box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
+      padding-top: 20px;
+    }
+    .numero {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #d35400;
+    }
+    .personaje {
+      width: 70px;
+      height: 100px;
+    }
+    .nombre-input {
+      display: block;
+      margin: 8px auto;
+      padding: 4px;
+      width: 90%;
+      border: none;
+      border-bottom: 2px solid #d35400;
+      background: transparent;
+      font-size: 14px;
+      text-align: center;
+    }
+    .bolas {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 10px;
+    }
+    .bola {
+      width: 30px;
+      height: 30px;
+      background-image: url("./sources/stoneball-Photoroom.png"); /* esfera gris */
+      background-size: cover;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .bola.active {
+      background-image: url("./sources/orangeball-Photoroom.png"); /* esfera naranja con estrella */
+      transform: scale(1.1);
+    }
+    button{
+      margin-top: 25px;
+      padding: 12px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 25px;
+      background: #ff6666;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    button:hover{
+      background: #e65555;
+    }
+  </style>
+</head>
+<body>
+  <h1>TABLERO</h1>
+  <div class="tablero">
+    
+    <!-- Ejemplo de tarjeta -->
+    <div class="card">
+      <div class="numero">1</div>
+      <img src="./sources/img1-Photoroom.png" class="personaje">
+      <input type="text" placeholder="Escribe un nombre..." class="nombre-input">
+      <div class="bolas">
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+      </div>
+    </div>
+    
+    <!-- Repite para más casillas -->
+    <div class="card">
+      <div class="numero">2</div>
+      <img src="./sources/img2-Photoroom.png" class="personaje">
+      <input type="text" placeholder="Escribe un nombre..." class="nombre-input">
+      <div class="bolas">
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="numero">3</div>
+      <img src="./sources/img3-Photoroom.png" class="personaje">
+      <input type="text" placeholder="Escribe un nombre..." class="nombre-input">
+      <div class="bolas">
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="numero">4</div>
+      <img src="./sources/img4-Photoroom.png" class="personaje">
+      <input type="text" placeholder="Escribe un nombre..." class="nombre-input">
+      <div class="bolas">
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="numero">5</div>
+      <img src="./sources/img5-Photoroom.png" class="personaje">
+      <input type="text" placeholder="Escribe un nombre..." class="nombre-input">
+      <div class="bolas">
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="numero">6</div>
+      <img src="./sources/img6-Photoroom.png" class="personaje">
+      <input type="text" placeholder="Escribe un nombre..." class="nombre-input">
+      <div class="bolas">
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="numero">7</div>
+      <img src="./sources/img7-Photoroom.png" class="personaje">
+      <input type="text" placeholder="Escribe un nombre..." class="nombre-input">
+      <div class="bolas">
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="numero">8</div>
+      <img src="./sources/img8-Photoroom.png" class="personaje">
+      <input type="text" placeholder="Escribe un nombre..." class="nombre-input">
+      <div class="bolas">
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="numero">9</div>
+      <img src="./sources/img9-Photoroom.png" class="personaje">
+      <input type="text" placeholder="Escribe un nombre..." class="nombre-input">
+      <div class="bolas">
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="numero">10</div>
+      <img src="./sources/img10-Photoroom.png" class="personaje">
+      <input type="text" placeholder="Escribe un nombre..." class="nombre-input">
+      <div class="bolas">
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="numero">11</div>
+      <img src="./sources/img11-Photoroom.png" class="personaje">
+      <input type="text" placeholder="Escribe un nombre..." class="nombre-input">
+      <div class="bolas">
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+      </div>
+    </div>
+  </div>
+  <button id="reset">RESET</button>
+  <script>
+    // Cambiar esfera al hacer clic
+    document.querySelectorAll(".bola").forEach(bola => {
+      bola.addEventListener("click", () => {
+        bola.classList.toggle("active");
+      });
+    });
+
+    //Resetear todo
+    const bolas = document.querySelectorAll('.bola');
+    const inputs = document.querySelectorAll('.nombre-input');
+    document.getElementById('reset').addEventListener('click',
+      () => {
+        bolas.forEach(c => c.classList.remove("active"));
+        inputs.forEach(input => input.value = "");
+      });
+  </script>
+</body>
+</html>
