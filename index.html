@@ -5,14 +5,32 @@
   <title>Tablero Dragon Ball</title>
   <style>
     body {
-      background: #cce6ff;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url("sources/fondo.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed; 
       font-family: Arial, sans-serif;
       text-align: center;
+
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4); /* negro con 40% de opacidad */
+      z-index: -1; /* queda detrás del contenido */
     }
     h1 {
       font-size: 2em;
       margin-bottom: 20px;
-      color: #2c2c54;
+      color: #fff5e6;
     }
     .tablero {
       display: grid;
